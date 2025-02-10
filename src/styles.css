@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+
+  .menu-enter {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .menu-enter-active {
+    opacity: 1;
+  }
+
+  .menu-exit {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .menu-exit-active {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@layer components {
+  .typewriter {
+    @apply overflow-hidden whitespace-nowrap mx-auto tracking-wide; /* Tailwind utilities */
+    border-right: 0.15em solid black; /* Cursor effect */
+    animation: typing 1.5s steps(30, end) infinite alternate,
+      blink-caret 0.75s step-end infinite; /* Apply animations */
+  }
+}

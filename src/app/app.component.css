@@ -1,0 +1,38 @@
+html {
+    scroll-behavior: smooth;
+
+    .menu-enter {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .menu-enter-active {
+      opacity: 1;
+    }
+
+    .menu-exit {
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .menu-exit-active {
+      opacity: 0;
+    }
+  }
+
+  .typing-effect {
+    overflow: hidden;
+    display: inline-block;
+  }
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+    100% {
+      border-color: transparent;
+    }
+  }
